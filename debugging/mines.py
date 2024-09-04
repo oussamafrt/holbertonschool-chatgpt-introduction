@@ -48,7 +48,7 @@ class Minesweeper:
         if (y * self.width + x) in self.mines:
             return False
         if self.revealed[y][x] or self.flagged[y][x]:
-            return True  # Ignore if already revealed or flagged
+            return True
         self.revealed[y][x] = True
         if self.count_mines_nearby(x, y) == 0:
             for dx in [-1, 0, 1]:
